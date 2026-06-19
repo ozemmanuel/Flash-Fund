@@ -1,0 +1,28 @@
+/* Simple styles for the To-Do app */
+:root{
+  --bg:#f7f7fb;
+  --card:#fff;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --danger:#ef4444;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.4;margin:0;background:var(--bg);color:#111}
+.app{max-width:640px;margin:48px auto;padding:20px}
+h1{text-align:center;margin:0 0 16px}
+.todo-form{display:flex;gap:8px;margin-bottom:12px}
+.todo-form input{flex:1;padding:10px;border:1px solid #e5e7eb;border-radius:6px}
+.todo-form button{padding:10px 12px;background:var(--accent);color:#fff;border:none;border-radius:6px;cursor:pointer}
+.controls{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.filters button{background:none;border:1px solid transparent;padding:6px 8px;border-radius:6px;cursor:pointer}
+.filters button.active{background:#eef2ff;border-color:transparent}
+button.danger{background:transparent;border:1px solid #fca5a5;color:var(--danger);padding:6px 10px;border-radius:6px}
+.todo-list{list-style:none;padding:0;margin:0;background:var(--card);border-radius:8px;overflow:hidden}
+.todo-item{display:flex;align-items:center;gap:10px;padding:10px;border-bottom:1px solid #f3f4f6}
+.todo-item:last-child{border-bottom:0}
+.todo-item input[type=checkbox]{width:18px;height:18px}
+.todo-item .title{flex:1}
+.todo-item .title.completed{text-decoration:line-through;color:var(--muted)}
+.todo-item button{background:none;border:0;color:var(--muted);cursor:pointer;padding:6px}
+.footer{margin-top:12px;text-align:left;color:var(--muted)}
+@media (max-width:420px){.app{margin:24px;padding:12px}}
